@@ -9,16 +9,16 @@ This exercise introduces the types of errors you'll see when your imports are mi
 
 #### Step 1
 
-Make sure you're in the root folder, which is called `import-warmup`. Execute the `run-exercises.py` file:
+Make sure you're in the root folder, which is called `import-warmup`. Run the `run-exercises.py` file:
 
 ```python
-python3.14 portfolio/run_exercises.py
+python3.14 run_exercises.py
 ```
 
 You'll see the following `NameError`:
 
 ```code
-File "/workspaces/import-warmup/run-exercises.py", line 2, in <module>
+File "/workspaces/import-warmup/run-exercises.py", line 1, in <module>
     my_portfolio = portfolio.data.create_portfolio("Retirement")
                    ^^^^^^^^^
 NameError: name 'portfolio' is not defined
@@ -26,28 +26,44 @@ NameError: name 'portfolio' is not defined
 
 #### Step 2
 
-add `import` statement(s) to the `run-exercises.py` file so that the above `NameError` is resolved. Do not change any other code in the file.
+Add `import` statement(s) to the `run-exercises.py` file so that the above `NameError` is resolved. Do not change any other code in the file.
 
 ##### Success
 
-If you've succeeded, the `NameError: name 'portfolio' is not defined` error is replaced with a new error: `NameError: name 'print_report' is not defined`
+If you've succeeded, the `NameError: name 'portfolio' is not defined` error is replaced with a new error: `NameError: name 'make_asset' is not defined`
 
 #### Step 3
 
-Add `import statement(s) to the `run-exercises.py` file so that all name errors are resolved. Do not change any other code in the file.
+Add `import` statement(s) to the relevant files so that the above `NameError` is resolved. Do not modify any of the existing code.
 
 ##### Success
 
-You'll know you succeeded when `portfolio/run-exercises.py runs without errors and prints the portfolio report.
+You'll know you succeeded when the above `NameError` is replaced with the following error:
+
+```code
+Traceback (most recent call last):
+  File "/workspaces/import-warmup/run-exercises.py", line 4, in <module>
+    portfolio.report.print_report(my_portfolio)
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'portfolio' has no attribute 'report'
+```
+
+#### Step 4: Further errors revealed in `run-exercises.py`
+
+Add `import` statement(s) to `run-exercises.py` so that the above `AttributeError` is resolved. Do not modify any of the existing code.
+
+##### Success
+
+You'll know you succeeded when running `python3.14 run-exercises.py` results in no errors and you have a report printed to the screen.
 
 ### Exercise 2: Imports and Refactored Code
 
-In this exercise, you'll see how refactoring code can break our code, and how imports can help.
+In this exercise, you'll see how refactoring code can break our imports, and how import statements must be refactored to suit the changes.
 
 #### Step 1
-Review the code in `portfolio/assets.py` and `portfolio/report.py`. Notice that one function is repeated in both files: `calculate_portfolio_value()`. Furthermore, a recent code review suggested that `calculate_asset_value()` doesn't belong in `portfolio/assets.py` because it acts upon an asset rather than being part of an asset.
+Review the code in `portfolio/assets.py`. A recent code review suggested that `calculate_asset_value()` and `calculate_portfolio_value()` does not belong in `portfolio/assets.py` because it acts upon an asset rather than being part of an asset. It also doesn't belong in `portfolio/report.py` because it's not about a report, either.
 
-Create a new module called `portfolio/metrics.py`. Refactor the two functions into this file and import them back into the original files. Do not change any other code in the original files (i.e., make the `import` statements work with the existing code rather than changing the existing code to make your `import` statements work.)
+Create a new module called `portfolio/metrics.py`. Refactor the two functions into this file and import them back into the original file(s). Do not change any other code in the original file(s) (i.e., make the `import` statements work with the existing code rather than changing the existing code to make your `import` statements work.)
 
 ##### Success:
 
@@ -84,7 +100,7 @@ Update your imports in all files so that all errors are resolved, and the report
 You'll know you succeeded when the report prints as expected, with no errors thrown.
 
 #### Step 4: "Automatic" Imports
-While the program runs as expected, it seems strange to have to explicitly import `report.py` into the main program since we'll likely always want to print a report, and we'd need a portfolio created first. Instead, the relevant files should be always imported without explicitly stating it in every file. This is a job for `__init__.py`!
+While the program runs as expected, it seems strange to have to explicitly import `report.py` and `data.py` into the main program since we'll likely always want to print a report, and we'd need a portfolio created first. Instead, the relevant files should be always imported when importing the enclosing package, without explicitly stating it in every file. This is a job for `__init__.py`!
 
 Modify the project so that you no longer have to explicitly import `report.py` and `data.py` into `run-exercises.py`.
 
