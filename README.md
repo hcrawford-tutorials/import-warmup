@@ -7,7 +7,7 @@ By the end of this lab, you will be able to:
 1. Write correct `import` statements using both absolute and relative import syntax
 1. Refactor code into separate modules while maintaining proper import relationships between files
 1. Organize Python code using packages with __init__.py files
-1. Use __init__.py files to control package initialization and automatic imports
+1. Use `__init__.py` files to control package initialization and automatic imports
 1. Apply relative imports within package hierarchies
 1. Diagnose and resolve common import errors including `NameError`, `AttributeError`, and `ModuleNotFoundError`
 
