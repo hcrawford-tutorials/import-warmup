@@ -8,7 +8,7 @@ The browser-based VSCode window will open automatically. Your Codespace is built
 
 ## Step 2: Use your Codespace to make a fork of the original repo
 
-Use the File Explorer window on the left side to open the `run-exercises.py` file. Wrap the existing code in the standard Python __main__ guard:
+Use the File Explorer window on the left side to open the `run-exercises.py` file. Wrap the existing code in the standard Python `__main__` guard:
 
 ```python
 if __name__ == "__main__":

@@ -50,7 +50,7 @@ If you've succeeded, the `NameError: name 'portfolio' is not defined` error is r
 
 #### Task 1.2: Correct `NameError`
 
-The error message tells you that `make_asset` is not defined. Find where `make_asset` is defined and add the necessary import statement(s) to the file(s) that use it. 
+The error message tells you that `make_asset` is not defined. Find where `make_asset` is defined and add the necessary import statement(s) to the file(s) that use it. Do not modify any of the existing code.
 
 ##### Success
 
@@ -74,13 +74,13 @@ You'll know you succeeded when running `python3.14 run_exercises.py` results in 
 
 ### Exercise 2: Imports and Refactored Code
 
-In this exercise, you'll see how refactoring code can break our imports, and how import statements must be refactored to suit the changes.
+In this exercise, you'll see how refactoring code can break existing `import` statements, and how to refactor `import` statements to suit the changes.
 
-#### Task 2.1: Refactoring
+#### Task 2.1: Refactoring and Namespaces
 Review the code in `portfolio/assets.py` and `portfolio/report.py`. Notice the following:
 
-- the `calculate_asset_value()` and `calculate_portfolio_value()` functions are repeated in each file.
-- Furthermore, a recent code review suggested that neither function belongs in `portfolio/assets.py` because they act upon an asset rather than being part of an asset. They also don't belong in `portfolio/report.py` because they're not about a report, either.
+- The `calculate_asset_value()` and `calculate_portfolio_value()` functions are found in both files.
+- A recent code review suggested that neither function belongs in `portfolio/assets.py` because they act upon an asset rather than being part of an asset. They also don't belong in `portfolio/report.py` because they're not about a report, either.
 
 Create a new module called `portfolio/metrics.py`. Refactor the two functions into this file and import them back into the original file(s). Do not change any other code in the original file(s) (i.e., make the `import` statements work with the existing code rather than changing the existing code to make your `import` statements work.)
 
@@ -97,7 +97,7 @@ You'll know you succeeded if:
 ### Exercise 3: Packages and Relative Imports
 Our code is looking good, but having all of the modules lumped into the `portfolio` folder makes it hard to understand how each module is linked to the others. Packages are one way to provide organization to your codebase, but the imports you use change when this structure changes.
 
-This exercise will give you practice with using import statements within packages, specifically with using relative imports.
+This exercise will give you practice with using `import` statements within packages, specifically with using relative imports.
 
 #### Task 3.1: Add a package to your current project
 Within the `portfolio/` directory, add a subdirectory called `core/`. Add an empty `__init__.py` file to `core/`.
