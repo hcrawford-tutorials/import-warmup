@@ -19,6 +19,8 @@ You'll know you succeeded if:
 1. The `calculate_asset_value()` and `calculate_portfolio_value()` functions appear only in `metrics.py`
 1. `run_exercises.py` runs without errors and prints the portfolio report.
 
+Add, commit, and push your changes to your repo.
+
 ##### Reflection
 1. Why is it a good idea to move repeated code into modules?
 1. What would happen if the module got moved into another subfolder? How would you correct these errors?

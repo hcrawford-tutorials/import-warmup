@@ -7,10 +7,12 @@ Our code is looking good, but having all of the modules lumped into the `portfol
 This exercise will give you practice with using `import` statements within packages, specifically with using relative imports.
 
 #### Task 3.1: Add a package to your current project
-Within the `portfolio/` directory, add a subdirectory called `core/`. Add an empty `__init__.py` file to `core/`.
+Within the `portfolio/` directory, add a subdirectory called `core/`. Add an empty `__init__.py` file to `core/`. 
 
 #### Task 3.2: Move in some files
-Move `assets.py` and `metrics.py` into `core/`. Your directory structure should look like this when you're finished:
+Move `assets.py` and `metrics.py` into `core/`. If you're prompted to accept refactoring changes, choose `Skip Changes`. The refactors are what you'll do in this lab!
+
+Your directory structure should look like this when you're finished:
 
 ```
 portfolio/

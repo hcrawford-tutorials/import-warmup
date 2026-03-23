@@ -6,10 +6,10 @@ By the end of this lab, you will be able to:
 
 1. Write correct `import` statements using both absolute and relative import syntax
 1. Refactor code into separate modules while maintaining proper import relationships between files
-1. Organize Python code using packages with __init__.py files
-1. Use __init__.py files to control package initialization and automatic imports
+1. Organize Python code using packages with `__init__.py` files
+1. Use `__init__.py` files to control package initialization and automatic imports
 1. Apply relative imports within package hierarchies
-1. Diagnose and resolve common import errors including `NameError`, `ImportError`, `AttributeError` and `ModuleNotFoundError`
+1. Diagnose and resolve common import errors including `NameError`, `ImportError`, `AttributeError`, and `ModuleNotFoundError`
 
 ### Setup Instructions
 
@@ -64,6 +64,8 @@ Traceback (most recent call last):
 AttributeError: module 'portfolio' has no attribute 'report'
 ```
 
+**Note:** You may have thought ahead during Task 1.1, above, and may have already corrected the problem that causes the `AttributeError` above. If you don't see the above `AttributeError`, get no other errors and your report prints to the screen, follow the link at the end of this document to go to Part 2 of the lab.
+
 #### Task 1.3: Correct further errors revealed in `run_exercises.py`
 
 Add `import` statement(s) to `run_exercises.py` so that the above `AttributeError` is resolved. Do not modify any of the existing code.
@@ -71,6 +73,12 @@ Add `import` statement(s) to `run_exercises.py` so that the above `AttributeErro
 ##### Success
 
 You'll know you succeeded when running `python3.14 run_exercises.py` results in no errors and you have a report printed to the screen.
+
+#### Task 1.3: Commit and Push your Changes
+
+Run `git status` on your repo to see the changes you made. You'll notice that there are several `__pycache__` folders in your codebase. These are auto-generated when you import modules into your code and contain bytecode for the modules you import in your project as a way of speeding up subsequent imports. They can be safely deleted since they'll be regenerated when needed, so they should not be committed to your repo.
+
+Create a `.gitignore` file in your repo and add `__pycache__` to it. Add, commit, and push your changes to your repo.
 
 ---
 
