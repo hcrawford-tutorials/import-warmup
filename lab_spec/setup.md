@@ -11,7 +11,7 @@ The browser-based VSCode window will open automatically. Your Codespace is built
 
 #### Step 2: Use your Codespace to make a fork of the original repo
 
-Use the File Explorer window on the left side to open the `run-exercises.py` file. Wrap the existing code in the standard Python `__main__` guard:
+Use the File Explorer window on the left side to open the `run_exercises.py` file. Wrap the existing code in the standard Python `__main__` guard:
 
 ```python
 if __name__ == "__main__":
@@ -31,7 +31,7 @@ Take a few minutes to explore the codebase and familiarize yourself with using b
 	- check out the different icons and menu options
 	- check out the tabs at the top of the integrated terminal (Problems, Output, Debug Console and Terminal)
 	- Try running the code under the debugger. Setting breakpoints and using the Debug Console to run code can be helpful when understanding the flow of control with import statements and the errors they can throw
-		- note that running the `run-exercises.py` script will fail - part of the lab is fixing this exception
+		- note that running the `run_exercises.py` script will fail - part of the lab is fixing this exception
 
 - Close the AI agent window that opens automatically. We won't be using AI for this tutorial, although it may be helpful to use it in Ask mode to explain things to you as you work through the tutorial exercises
 
@@ -47,10 +47,10 @@ GitHub Codespaces provides an easy to use and set up environment for writing cod
 
 Source: [GitHub Codespaces billing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-quota)
 
-Compute time is used when a Codespace is actively running. Storage is used as long as the Codespace exists, even if it's not running. To make the most of your monthly quotas, remember to stop the Codespace when you're not using it (i.e., at the end of this tutorial) and delete it when you don't intend to use it for a while. Deleting the Codespace does not affect the forked repo created when you first pushed changes. This means that you can delete a Codespace and recreate it from the forked repo whenever you want to work with the repo again. Make sure you commit and push your changes so you don't lose them when you delete the Codespace.
+Compute time is used when a Codespace is actively running. Storage is used as long as the Codespace exists, even if it's not running. To make the most of your monthly quotas, remember to stop the Codespace when you're not using it (i.e., at the end of this tutorial) and delete it when you don't intend to use it for a while. Deleting the Codespace does not affect the forked repo you created when you first pushed changes. This means that you can delete a Codespace and recreate it from the forked repo whenever you want to work with the repo again. Make sure you commit and push your changes so you don't lose them when you delete the Codespace.
 
 #### To stop a Codespace:
-1. Click the hamburger menu at the left of your GitHub repo menu (not the VSCode browser window)
+1. Click the hamburger menu (`☰`) at the left of your GitHub repo menu (not the VSCode browser window)
 1. Click Codespaces
 1. From the list of Codespaces, find the one you want to stop
 1. In the Your Codespaces section, click on the three dots menu to the right of the codespace and click Stop Codespace
@@ -60,7 +60,7 @@ This Codespace can be restarted from the same place simply by clicking on it in 
 #### To delete a Codespace:
 1. Commit and push any changes you've made that you want to keep
 	- If you delete a Codespace with un-pushed changes, they will be lost
-1. Click the hamburger menu at the left of your GitHub repo menu (not the VSCode browser window)
+1. Click the hamburger menu (`☰`) at the left of your GitHub repo menu (not the VSCode browser window)
 1. Click Codespaces
 1. In the Your Codespaces section, click on the three dots menu to the right of the codespace and click Delete
 
