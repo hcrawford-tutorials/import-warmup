@@ -14,7 +14,7 @@ By the end of this lab, you will be able to:
 ### Setup Instructions
 
 1. Follow these [setup instructions](./lab_spec/setup.md), then return here to get started
-1. Use the integrated terminal to navigate to the `import-warmup/` directory if you're not already there
+1. If you're not already there, use the integrated terminal to navigate to the `import-warmup/` directory
 1. Verify that your Codespace is set up correctly by running `python3.14 --version`. The output should be `Python 3.14.0`.
 
 ### Exercise 1: Basic Imports
